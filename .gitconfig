@@ -1,0 +1,12 @@
+[user]
+	name = "Alex Hornung"
+	email = alex@alexhornung.com
+
+[github]
+	user = bwalex
+
+[color]
+	diff = auto
+
+[push]
+	default = simple
