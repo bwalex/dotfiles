@@ -41,7 +41,7 @@ function prompt_generate {
 	# jobs display
 	prompt_jobs
 	# shell nesting
-	PROMPT="$PROMPT%(2L.%{${fg_bold[yellow]}%}<%L>%{$reset_color%} .)"
+	#PROMPT="$PROMPT%(2L.%{${fg_bold[yellow]}%}<%L>%{$reset_color%} .)"
 	# tty name
 	#PROMPT="$PROMPT%l "
 	# start second line

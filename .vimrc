@@ -55,6 +55,18 @@ set cinoptions=:0,g0,t0,+4,(0,u0,W4
 let c_space_errors=1
 let c_gnu=1
 
+" Use the 'unnamed' clipboard by default - which is
+" the middle-click buffer on Linux and the normal
+" ctrl+c/ctrl+v buffer on Windows and Mac.
+" 'unnamedplus' is the ctrl+c/ctrl+v buffer on
+" Linux.
+set clipboard=unnamed
+
+" Placeholder for OS-specific config
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
+elseif os == 'Linux'
+endif
 
 
 "" SkyBison
@@ -82,11 +94,8 @@ nnoremap <leader>E :<c-u>Unite file<cr>
 let g:airline#extensions#branch#enabled = 1
 "let g:airline#extensions#branch#empty_message = 'No branch'
 "let g:airline#extensions#branch#use_vcscommand = 0
-
 let g:airline#extensions#hunks#enabled = 1
-
 let g:airline#extensions#tmuxline#enabled = 0
-
 
 
 "" NERDTree
@@ -95,3 +104,13 @@ let g:airline#extensions#tmuxline#enabled = 0
 nnoremap <leader>n :<c-u>NERDTree<cr>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+"" tmux-navigator
+"""""""""""
+
+nnoremap <silent> <c-left>  :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-down>  :TmuxNavigateDown<cr>
+nnoremap <silent> <c-up>    :TmuxNavigateUp<cr>
+nnoremap <silent> <c-right> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\>     :TmuxNavigatePrevious<cr>
