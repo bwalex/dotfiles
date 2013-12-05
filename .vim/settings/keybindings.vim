@@ -68,6 +68,7 @@ nnoremap <leader>e :<c-u>call SkyBison("e ")<cr>
 """""""""""
 nnoremap <leader>B :<c-u>Unite buffer<cr>
 nnoremap <leader>E :<c-u>Unite file<cr>
+nnoremap <leader>y :<c-u>Unite history/yank<cr>
 
 
 "" NERDTree
