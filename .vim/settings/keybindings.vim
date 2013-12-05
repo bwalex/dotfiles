@@ -58,17 +58,18 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 
 "" SkyBison
 """""""""""
-nnoremap <leader>b 2:<c-u>call SkyBison("b ")<cr>
+nnoremap <leader>B 2:<c-u>call SkyBison("b ")<cr>
 nnoremap <leader>t 2:<c-u>call SkyBison("tag ")<cr>
-nnoremap <leader>h 2:<c-u>call SkyBison("h ")<cr>
-nnoremap <leader>e :<c-u>call SkyBison("e ")<cr>
+nnoremap <leader>H 2:<c-u>call SkyBison("h ")<cr>
+nnoremap <leader>E :<c-u>call SkyBison("e ")<cr>
 
 
 "" Unite
 """""""""""
-nnoremap <leader>B :<c-u>Unite buffer<cr>
-nnoremap <leader>E :<c-u>Unite file<cr>
-nnoremap <leader>y :<c-u>Unite history/yank<cr>
+nnoremap <leader>b :<c-u>Unite -quick-match buffer<cr>
+nnoremap <leader>e :<c-u>Unite file<cr>
+nnoremap <leader>h :<c-u>Unite help<cr>
+nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
 
 
 "" NERDTree
