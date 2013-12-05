@@ -63,9 +63,9 @@ nnoremap <leader>m :Man
 "" SkyBison
 """""""""""
 nnoremap <leader>B 2:<c-u>call SkyBison("b ")<cr>
-nnoremap <leader>t 2:<c-u>call SkyBison("tag ")<cr>
-nnoremap <leader>H 2:<c-u>call SkyBison("h ")<cr>
 nnoremap <leader>E :<c-u>call SkyBison("e ")<cr>
+nnoremap <leader>H 2:<c-u>call SkyBison("h ")<cr>
+nnoremap <leader>T 2:<c-u>call SkyBison("tag ")<cr>
 
 
 "" Unite
@@ -73,6 +73,7 @@ nnoremap <leader>E :<c-u>call SkyBison("e ")<cr>
 nnoremap <leader>b :<c-u>Unite -quick-match buffer<cr>
 nnoremap <leader>e :<c-u>Unite file<cr>
 nnoremap <leader>h :<c-u>Unite help<cr>
+nnoremap <leader>t :<c-u>Unite tag<cr>
 nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
 
 

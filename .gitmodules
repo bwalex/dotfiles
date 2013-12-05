@@ -118,3 +118,6 @@
 [submodule ".vim/bundle/unite-help"]
 	path = .vim/bundle/unite-help
 	url = https://github.com/tsukkee/unite-help.git
+[submodule ".vim/bundle/unite-tag"]
+	path = .vim/bundle/unite-tag
+	url = https://github.com/tsukkee/unite-tag.git
