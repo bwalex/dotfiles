@@ -53,7 +53,7 @@ nnoremap <D-Right> <C-w>>
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
-nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
+nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 
 
 "" SkyBison
@@ -88,3 +88,13 @@ nnoremap <silent> <c-\>     :TmuxNavigatePrevious<cr>
 "" Gundo
 """""""""""
 nnoremap <leader>u :GundoToggle<cr>
+
+
+"" Ag
+"""""""""""
+nnoremap <leader>/ :Ag 
+
+
+"" vim-dispatch
+"""""""""""
+nnoremap <leader>d :Dispatch 
