@@ -17,7 +17,7 @@ set hlsearch
 set incsearch
 set ruler
 set laststatus=2
-set showcmd
+set showcmd "Show the (partial) command as itâs being typed
 set wildmenu
 set backupcopy=auto,breakhardlink
 set title
@@ -32,6 +32,13 @@ set tabpagemax=50
 set viminfo='50,<1000,s20,h
 set gfm+=%f:\ %l:\ %m
 set hidden
+
+" Not convinced...
+set ignorecase
+set smartcase
+
+" Don't reset cursor to start of line when moving around.
+set nostartofline
 
 "set t_Co=256
 colorscheme railscasts
@@ -82,6 +89,21 @@ endif
 
 
 
+" If you visually select something and hit paste
+" that thing gets yanked into your buffer. This
+" generally is annoying when you're copying one item
+" and repeatedly pasting it. This changes the paste
+" command in visual mode so that it doesn't overwrite
+" whatever is in your paste buffer.
+"
+vnoremap p "_dP
+
+
+" w!! to write a file as sudo
+" stolen from Steve Losh
+cmap w!! w !sudo tee % >/dev/null
+
+
 
 "" SkyBison
 """""""""""
@@ -115,6 +137,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 "" NERDTree
 """""""""""
 
+let NERDTreeMinimalUI = 1 " is this useful?
 nnoremap <leader>n :<c-u>NERDTree<cr>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -134,3 +157,96 @@ nnoremap <silent> <c-\>     :TmuxNavigatePrevious<cr>
 """""""""""
 
 runtime macros/matchit.vim
+
+
+
+
+" via: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+" Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+" Do the business:
+    %s/\s\+$//e
+" Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
+nmap <leader>w :StripTrailingWhitespaces<CR>
+
+
+
+
+
+
+
+
+
+" ," Surround a word with "quotes"
+map ," ysiw"
+vmap ," c"<C-R>""<ESC>
+
+" ,' Surround a word with 'single quotes'
+map ,' ysiw'
+vmap ,' c'<C-R>"'<ESC>
+
+
+" ,) or ,( Surround a word with (parens)
+" The difference is in whether a space is put in
+map ,( ysiw(
+map ,) ysiw)
+vmap ,( c( <C-R>" )<ESC>
+vmap ,) c(<C-R>")<ESC>
+
+" ,[ Surround a word with [brackets]
+map ,] ysiw]
+map ,[ ysiw[
+vmap ,[ c[ <C-R>" ]<ESC>
+vmap ,] c[<C-R>"]<ESC>
+
+" ,{ Surround a word with {braces}
+map ,} ysiw}
+map ,{ ysiw{
+vmap ,} c{ <C-R>" }<ESC>
+vmap ,{ c{<C-R>"}<ESC>
+
+
+" gary bernhardt's hashrocket
+imap <c-l> <space>=><space>
+
+
+
+
+"Go to last edit location with ,.
+nnoremap ,. '.
+
+
+" Zoom in and out of current window with ,gz
+map <silent> ,gz <C-w>o
+
+
+
+" Resize windows with arrow keys
+nnoremap <D-Up> <C-w>+
+nnoremap <D-Down> <C-w>-
+nnoremap <D-Left> <C-w><
+nnoremap <D-Right> <C-w>>
+
+
+
+" copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
+" this is helpful to paste someone the path you're looking at
+nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
+
+
+
+highlight ExtraWhitespace ctermbg=darkred guibg=#382424
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
+" The above flashes annoyingly while typing, be calmer in insert mode
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
