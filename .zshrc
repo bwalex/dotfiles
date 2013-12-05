@@ -64,3 +64,17 @@ fi
 if (( $+commands[pry] )); then
   alias irb=pry
 fi
+
+
+alias psa="ps aux"
+alias psg="ps aux | grep "
+alias ll='ls -alh'
+
+alias git='noglob git'
+
+export EDITOR=vim
+export VISUAL=vim
+
+# http://zshwiki.org/home/builtin/functions/zmv
+autoload -U zmv
+alias zmv="noglob zmv -W"
