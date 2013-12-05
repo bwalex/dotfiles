@@ -40,7 +40,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gem bundler brew systemd vagrant command-not-found history ssh)
+plugins=(git gem bundler brew systemd vagrant command-not-found history ssh fasd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,4 +59,8 @@ xset b off 2> /dev/null
 
 if [[ $TERM == xterm ]]; then
 	export TERM=xterm-256color
+fi
+
+if (( $+commands[pry] )); then
+  alias irb=pry
 fi
