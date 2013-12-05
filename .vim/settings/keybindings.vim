@@ -56,6 +56,10 @@ nnoremap <D-Right> <C-w>>
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 
 
+nnoremap <leader>m :Man 
+
+
+
 "" SkyBison
 """""""""""
 nnoremap <leader>B 2:<c-u>call SkyBison("b ")<cr>
