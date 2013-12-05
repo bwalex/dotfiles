@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader=","
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
