@@ -250,3 +250,22 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 " The above flashes annoyingly while typing, be calmer in insert mode
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+
+
+
+" Prevent vim-session from asking us to load the session.
+" If you want to load the session, use :SaveSession and :OpenSession
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+
+
+
+
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
+
+nnoremap <leader>u :GundoToggle<cr>
