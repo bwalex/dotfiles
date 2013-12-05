@@ -1,3 +1,5 @@
+set nocompatible
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 execute pathogen#infect()
@@ -114,3 +116,9 @@ nnoremap <silent> <c-down>  :TmuxNavigateDown<cr>
 nnoremap <silent> <c-up>    :TmuxNavigateUp<cr>
 nnoremap <silent> <c-right> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\>     :TmuxNavigatePrevious<cr>
+
+
+"" vim-textobj-rubyblock
+"""""""""""
+
+runtime macros/matchit.vim
