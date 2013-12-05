@@ -61,6 +61,7 @@ if [[ $TERM == xterm ]]; then
 	export TERM=xterm-256color
 fi
 
+# If pry is installed, use it as the default ruby command-line interpreter
 if (( $+commands[pry] )); then
   alias irb=pry
 fi
