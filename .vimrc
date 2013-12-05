@@ -186,32 +186,32 @@ nmap <leader>w :StripTrailingWhitespaces<CR>
 
 
 " ," Surround a word with "quotes"
-map ," ysiw"
-vmap ," c"<C-R>""<ESC>
+map <leader>" ysiw"
+vmap <leader>" c"<C-R>""<ESC>
 
 " ,' Surround a word with 'single quotes'
-map ,' ysiw'
-vmap ,' c'<C-R>"'<ESC>
+map <leader>' ysiw'
+vmap <leader>' c'<C-R>"'<ESC>
 
 
 " ,) or ,( Surround a word with (parens)
 " The difference is in whether a space is put in
-map ,( ysiw(
-map ,) ysiw)
-vmap ,( c( <C-R>" )<ESC>
-vmap ,) c(<C-R>")<ESC>
+map <leader>( ysiw(
+map <leader>) ysiw)
+vmap <leader>( c( <C-R>" )<ESC>
+vmap <leader>) c(<C-R>")<ESC>
 
 " ,[ Surround a word with [brackets]
-map ,] ysiw]
-map ,[ ysiw[
-vmap ,[ c[ <C-R>" ]<ESC>
-vmap ,] c[<C-R>"]<ESC>
+map <leader>] ysiw]
+map <leader>[ ysiw[
+vmap <leader>[ c[ <C-R>" ]<ESC>
+vmap <leader>] c[<C-R>"]<ESC>
 
 " ,{ Surround a word with {braces}
-map ,} ysiw}
-map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
+map <leader>} ysiw}
+map <leader>{ ysiw{
+vmap <leader>} c{ <C-R>" }<ESC>
+vmap <leader>{ c{<C-R>"}<ESC>
 
 
 " gary bernhardt's hashrocket
@@ -221,11 +221,11 @@ imap <c-l> <space>=><space>
 
 
 "Go to last edit location with ,.
-nnoremap ,. '.
+nnoremap <leader>. '.
 
 
 " Zoom in and out of current window with ,gz
-map <silent> ,gz <C-w>o
+map <silent> <leader>gz <C-w>o
 
 
 
