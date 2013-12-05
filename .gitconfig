@@ -5,6 +5,9 @@
 [github]
 	user = bwalex
 
+[core]
+	editor = vim
+
 [color]
 	diff = auto
 
