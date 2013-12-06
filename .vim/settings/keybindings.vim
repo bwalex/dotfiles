@@ -104,3 +104,25 @@ nnoremap <leader>/ :Ag
 "" vim-dispatch
 """""""""""
 nnoremap <leader>d :Dispatch 
+
+
+"" VCSCommand
+"""""""""""
+nmap <leader>cD :VCSDiff <C-R><C-W><CR>
+nmap <leader>cr :VCSReview <C-R><C-W><CR>
+nnoremap <leader>cb :VCSBlame<CR>
+nnoremap <leader>cB :VCSBlame!<CR>
+
+
+"" Fugitive
+"""""""""""
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gl :Glog<cr>
+nnoremap <leader>ga :Gadd<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gM :Gmove
+nnoremap <leader>gD :Gremove<cr>
+nnoremap <leader>gR :Gread<cr>
+nnoremap <leader>gW :Gwrite<cr>
