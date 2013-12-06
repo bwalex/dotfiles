@@ -6,7 +6,7 @@ set hlsearch
 set incsearch
 set ruler
 set laststatus=2
-set showcmd "Show the (partial) command as itâs being typed
+set showcmd "Show the (partial) command as it's being typed
 set wildmenu
 set backupcopy=auto,breakhardlink
 set title
