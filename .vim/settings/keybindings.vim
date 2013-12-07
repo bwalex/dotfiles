@@ -51,6 +51,13 @@ nnoremap <D-Left> <C-w><
 nnoremap <D-Right> <C-w>>
 
 
+" Convient bindings to switch between indent types
+nmap <leader>i2  :set expandtab        sts=2 sw=2<cr>
+nmap <leader>i4  :set expandtab        sts=4 sw=4<cr>
+nmap <leader>it4 :set noexpandtab ts=4 sts=4 sw=4<cr>
+nmap <leader>it8 :set noexpandtab ts=8 sts=8 sw=8<cr>
+
+
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
