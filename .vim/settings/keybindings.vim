@@ -81,7 +81,7 @@ nnoremap <leader>r :<c-u>Unite file_mru<cr>
 
 "" NERDTree
 """""""""""
-nnoremap <leader>n :<c-u>NERDTree<cr>
+nnoremap <leader>n :<c-u>NERDTreeToggle<cr>
 
 
 "" tmux-navigator
