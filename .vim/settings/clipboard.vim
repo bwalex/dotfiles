@@ -3,7 +3,7 @@
 " ctrl+c/ctrl+v buffer on Windows and Mac.
 " 'unnamedplus' is the ctrl+c/ctrl+v buffer on
 " Linux.
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " If you visually select something and hit paste
 " that thing gets yanked into your buffer. This
