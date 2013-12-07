@@ -70,11 +70,13 @@ nnoremap <leader>T 2:<c-u>call SkyBison("tag ")<cr>
 
 "" Unite
 """""""""""
+" also supports -default-action=....
 nnoremap <leader>b :<c-u>Unite -quick-match buffer<cr>
 nnoremap <leader>e :<c-u>Unite file<cr>
 nnoremap <leader>h :<c-u>Unite help<cr>
 nnoremap <leader>t :<c-u>Unite tag<cr>
 nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
+nnoremap <leader>r :<c-u>Unite file_mru<cr>
 
 
 "" NERDTree
