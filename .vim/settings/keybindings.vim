@@ -141,3 +141,7 @@ nnoremap <leader>gW :Gwrite<cr>
 """""""""""
 nnoremap <leader>rc :VimuxPromptCommand<cr>
 nnoremap <leader>vp :VimuxPromptCommand<cr>
+
+
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
