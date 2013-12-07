@@ -135,3 +135,9 @@ nnoremap <leader>gM :Gmove
 nnoremap <leader>gD :Gremove<cr>
 nnoremap <leader>gR :Gread<cr>
 nnoremap <leader>gW :Gwrite<cr>
+
+
+"" vimux
+"""""""""""
+nnoremap <leader>rc :VimuxPromptCommand<cr>
+nnoremap <leader>vp :VimuxPromptCommand<cr>
