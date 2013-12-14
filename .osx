@@ -1,5 +1,7 @@
 sudo -v
 
+defaults write com.apple.dock wvous-show-windows-in-other-spaces -bool FALSE
+
 # Show remaining battery time; hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
