@@ -63,6 +63,22 @@ prompt_pure_string_length() {
 	echo ${#${(S%%)1//(\%([KF1]|)\{*\}|\%[Bbkf])}}
 }
 
+function prompt_pure_jobs {
+	# from http://www.miek.nl/blog/archives/2008/02/20/my_zsh_prompt_setup/index.html
+	local js
+	local jobno
+
+	js=()
+	for jobno (${(k)jobstates}) {
+		local fullstate=$jobstates[$jobno]
+		local state="${${(@s,:,)fullstate}[2]}"
+		js+=($jobno${state//[^+-]/})
+	}
+	if [[ $#js -gt 0 ]]; then
+		print -Pn "%F{yellow}[${(j:,:)js}]%f"
+	fi
+}
+
 prompt_pure_precmd() {
 	# shows the full path in the title
 	print -Pn '\e]0;%~\a'
@@ -70,8 +86,10 @@ prompt_pure_precmd() {
 	# git info
 	vcs_info
 
-	local prompt_pure_preprompt='\n%F{cyan}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f'
-	print -P $prompt_pure_preprompt
+	local prompt_pure_preprompt='\n%F{cyan}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f '
+	print -Pn $prompt_pure_preprompt
+	prompt_pure_jobs
+	print -P
 
 	# check async if there is anything to pull
 	(( ${PURE_GIT_PULL:-1} )) && {
@@ -104,7 +122,7 @@ prompt_pure_setup() {
 	add-zsh-hook precmd prompt_pure_precmd
 	add-zsh-hook preexec prompt_pure_preexec
 
-	zstyle ':vcs_info:*' enable git
+	zstyle ':vcs_info:*' enable git bzr hg svn
 	zstyle ':vcs_info:git*' formats ' %b'
 	zstyle ':vcs_info:git*' actionformats ' %b|%a'
 
