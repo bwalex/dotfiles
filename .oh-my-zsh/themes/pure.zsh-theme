@@ -79,6 +79,12 @@ function prompt_pure_jobs {
 	fi
 }
 
+function prompt_pure_rbenv {
+	if hash rbenv 2> /dev/null; then
+		print -Pn "rbenv:%F{magenta}$(rbenv version-name)%f "
+	fi
+}
+
 prompt_pure_precmd() {
 	# shows the full path in the title
 	print -Pn '\e]0;%~\a'
@@ -88,6 +94,7 @@ prompt_pure_precmd() {
 
 	local prompt_pure_preprompt='\n%F{cyan}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f '
 	print -Pn $prompt_pure_preprompt
+	prompt_pure_rbenv
 	prompt_pure_jobs
 	print -P
 

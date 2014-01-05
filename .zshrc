@@ -43,6 +43,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git gem bundler brew systemd vagrant command-not-found history ssh fasd)
 
+# rbenv init
+if hash rbenv 2> /dev/null; then
+	# consider --no-rehash before `zsh`
+	eval "$(rbenv init - zsh)"
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
