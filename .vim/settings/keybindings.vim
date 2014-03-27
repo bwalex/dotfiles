@@ -142,6 +142,10 @@ nnoremap <leader>gW :Gwrite<cr>
 nnoremap <leader>rc :VimuxPromptCommand<cr>
 nnoremap <leader>vp :VimuxPromptCommand<cr>
 
+"" vim-expand-region
+"""""""""""
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
