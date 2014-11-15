@@ -150,3 +150,10 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
+
+
+"" visual search
+"""""""""""
+vnoremap <silent> * :<C-U>call VSetSearch('/')<CR>/<C-R>/<CR>
+vnoremap <silent> # :<C-U>call VSetSearch('?')<CR>?<C-R>/<CR>
+nmap <unique> <Leader>vl <Plug>VLToggle
