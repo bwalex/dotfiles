@@ -66,15 +66,6 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 nnoremap <leader>m :Man 
 
 
-
-"" SkyBison
-"""""""""""
-nnoremap <leader>B 2:<c-u>call SkyBison("b ")<cr>
-nnoremap <leader>E :<c-u>call SkyBison("e ")<cr>
-nnoremap <leader>H 2:<c-u>call SkyBison("h ")<cr>
-nnoremap <leader>T 2:<c-u>call SkyBison("tag ")<cr>
-
-
 "" Unite
 """""""""""
 " also supports -default-action=....
