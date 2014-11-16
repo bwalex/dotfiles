@@ -2,7 +2,8 @@
 nnoremap <leader>, ,
 
 " clear highlighting of hlsearch
-nnoremap <silent> <C-L> :nohlsearch<cr><C-L>
+nmap \q :nohlsearch<cr>
+nmap \c :nohlsearch<cr>
 
 " ," Surround a word with "quotes"
 map <leader>" ysiw"
@@ -31,12 +32,11 @@ map <leader>{ ysiw{
 vmap <leader>} c{ <C-R>" }<ESC>
 vmap <leader>{ c{<C-R>"}<ESC>
 
+" Go to last buffer
+nmap <C-e> :b#<cr>
+nnoremap <leader>p :b#<cr>
 
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
-
-
-"Go to last edit location with ,.
+" Go to last edit location with ,.
 nnoremap <leader>. '.
 
 
@@ -77,6 +77,13 @@ nnoremap <leader>t :<c-u>Unite tag<cr>
 nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
 nnoremap <leader>r :<c-u>Unite file_mru<cr>
 
+"" CtrlP
+"""""""""""
+nnoremap <leader>B :<c-u>CtrlPBuffer<cr>
+nnoremap <leader>E :<c-u>CtrlP<cr>
+nnoremap <leader>W :<c-u>CtrlCurWD<cr>
+nnoremap <leader>T :<c-u>CtrlPTag<cr>
+nnoremap <leader>R :<c-u>CtrlPMRUFiles<cr>
 
 "" NERDTree
 """""""""""
