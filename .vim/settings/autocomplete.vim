@@ -8,8 +8,8 @@ let g:neocomplcache_enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 
-function! s:my_cr_function()
-	return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
-imap <expr><silent> <CR> <SID>my_cr_function()
-imap <C-X><CR> <CR><Plug>AlwaysEnd
+" function! s:my_cr_function()
+" 	return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+" endfunction
+" imap <expr><silent> <CR> <SID>my_cr_function()
+" imap <C-X><CR> <CR><Plug>AlwaysEnd
