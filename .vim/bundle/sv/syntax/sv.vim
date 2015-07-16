@@ -20,7 +20,7 @@ endif
 
 " A bunch of useful SV keywords
 syn keyword	svStatement	break return continue fork join terminate assign
-syn keyword	svStatement	breakpoint proceed join_none join_any always initial
+syn keyword	svStatement	breakpoint proceed join_none join_any always initial always_ff always_latch always_comb
 syn keyword	svStatement	genvar generate endgenerate
 
 syn keyword     svAssert        assert assume cover expect disable iff binsof
@@ -288,6 +288,31 @@ syn match	svUserLabel	display "\I\i*" contained
 " Avoid recognizing most bitfields as labels
 syn match	svBitField	display "^\s*\I\i*\s*:\s*[1-9]"me=e-1
 syn match	svBitField	display ";\s*\I\i*\s*:\s*[1-9]"me=e-1
+
+if exists("loaded_matchit") && !exists("b:match_words")
+  let b:match_ignorecase=0
+  let b:match_words=
+    \ '\<begin\>:\<end\>,' .
+    \ '\<if\>:\<else\>,' .
+    \ '\<module\>:\<endmodule\>,' .
+    \ '\<class\>:\<endclass\>,' .
+    \ '\<program\>:\<endprogram\>,' .
+    \ '\<clocking\>:\<endclocking\>,' .
+    \ '\<property\>:\<endproperty\>,' .
+    \ '\<sequence\>:\<endsequence\>,' .
+    \ '\<package\>:\<endpackage\>,' .
+    \ '\<covergroup\>:\<endgroup\>,' .
+    \ '\<primitive\>:\<endprimitive\>,' .
+    \ '\<specify\>:\<endspecify\>,' .
+    \ '\<generate\>:\<endgenerate\>,' .
+    \ '\<interface\>:\<endinterface\>,' .
+    \ '\<function\>:\<endfunction\>,' .
+    \ '\<task\>:\<endtask\>,' .
+    \ '\<case\>\|\<casex\>\|\<casez\>:\<endcase\>,' .
+    \ '\<fork\>:\<join\>\|\<join_any\>\|\<join_none\>,' .
+    \ '`ifdef\>:`else\>:`endif\>,' .
+    \ '\<generate\>:\<endgenerate\>'
+endif
 
 if exists("sv_minlines")
   let b:sv_minlines = sv_minlines
