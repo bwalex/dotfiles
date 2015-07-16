@@ -155,3 +155,5 @@ vmap <Enter> <Plug>(EasyAlign)
 vnoremap <silent> * :<C-U>call VSetSearch('/')<CR>/<C-R>/<CR>
 vnoremap <silent> # :<C-U>call VSetSearch('?')<CR>?<C-R>/<CR>
 nmap <unique> <Leader>vl <Plug>VLToggle
+vnoremap <silent> _ :<C-U>call VSetSearchAssign('/')<CR>/<C-R>/<CR>
+nmap <leader>= /<c-r>='\s'."\\<".expand("<cword>").'\>.*\s\(<=\\|=\)\s'<cr><CR>
