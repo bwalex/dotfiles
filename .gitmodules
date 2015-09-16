@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/gist-vim"]
 	path = .vim/bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
-[submodule ".vim/bundle/colors-solarized"]
-	path = .vim/bundle/colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/colors-railscasts"]
 	path = .vim/bundle/colors-railscasts
 	url = https://github.com/jpo/vim-railscasts-theme.git
