@@ -81,7 +81,7 @@ nnoremap <leader>r :<c-u>Unite file_mru<cr>
 """""""""""
 nnoremap <leader>B :<c-u>CtrlPBuffer<cr>
 nnoremap <leader>E :<c-u>CtrlP<cr>
-nnoremap <leader>W :<c-u>CtrlCurWD<cr>
+nnoremap <leader>W :<c-u>CtrlPCurWD<cr>
 nnoremap <leader>T :<c-u>CtrlPTag<cr>
 nnoremap <leader>R :<c-u>CtrlPMRUFiles<cr>
 
