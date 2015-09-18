@@ -67,7 +67,7 @@ prompt_pure_git_dirty() {
 	# check if we're in a git repo
 	command git rev-parse --is-inside-work-tree &>/dev/null || return
 	# check if it's dirty
-	command git diff --quiet --ignore-submodules HEAD &>/dev/null
+	command git diff --quiet --ignore-submodules=untracked HEAD &>/dev/null
 
 	(($? == 1)) && echo '*'
 }
@@ -261,9 +261,9 @@ prompt_pure_async_git_dirty() {
 	cd -q "$*"
 
 	if [[ "$untracked_dirty" == "0" ]]; then
-		command git diff --no-ext-diff --quiet --exit-code
+		command git diff --ignore-submodules=untracked --no-ext-diff --quiet --exit-code
 	else
-		test -z "$(command git status --porcelain --ignore-submodules -unormal)"
+		test -z "$(command git status --porcelain --ignore-submodules=untracked -unormal)"
 	fi
 
 	(( $? )) && echo "*"
