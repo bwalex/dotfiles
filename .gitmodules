@@ -151,3 +151,6 @@
 [submodule ".vim/bundle/ctrlp-cmatcher"]
 	path = .vim/bundle/ctrlp-cmatcher
 	url = https://github.com/JazzCore/ctrlp-cmatcher.git
+[submodule ".vim/bundle/colors-gruvbox"]
+	path = .vim/bundle/colors-gruvbox
+	url = https://github.com/morhetz/gruvbox.git
