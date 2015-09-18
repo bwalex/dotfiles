@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.zsh-custom
 
 PURE_CMD_MAX_EXEC_TIME=5
 PURE_GIT_PULL=0
