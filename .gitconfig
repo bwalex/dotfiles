@@ -29,6 +29,7 @@
 	recent-branches = !git for-each-ref --count=5 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 	pullr = pull --rebase
 	stash-file-list = "!for s in `git stash list --format=\"%gd\"`; do git stash show \"$s\" --name-only | sed -e \"s/^/$s: /\"; done"
+	tcommit = "!tmux send \"git diff --cached\" C-m \\; split-window -h \\; send \"git commit; exit\" C-m"
 
 [rerere]
 	enabled = true
