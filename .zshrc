@@ -141,3 +141,5 @@ export VISUAL=vim
 # http://zshwiki.org/home/builtin/functions/zmv
 autoload -U zmv
 alias zmv="noglob zmv -W"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

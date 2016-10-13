@@ -11,4 +11,4 @@ let g:ycm_show_diagnostics_ui = 0
 
 let g:airline#extensions#syntastic#enabled = 1
 
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['flow', 'eslint']

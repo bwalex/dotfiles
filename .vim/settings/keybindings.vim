@@ -51,7 +51,7 @@ nnoremap <D-Left> <C-w><
 nnoremap <D-Right> <C-w>>
 
 
-" Convient bindings to switch between indent types
+" Convenient bindings to switch between indent types
 nmap <leader>i2  :set expandtab        sts=2 sw=2<cr>
 nmap <leader>i4  :set expandtab        sts=4 sw=4<cr>
 nmap <leader>it4 :set noexpandtab ts=4 sts=4 sw=4<cr>
@@ -69,17 +69,18 @@ nnoremap <leader>m :Man
 "" Unite
 """""""""""
 " also supports -default-action=....
-nnoremap <leader>b :<c-u>Unite -start-insert buffer<cr>
-nnoremap <leader>e :<c-u>Unite file<cr>
+nnoremap <leader>B :<c-u>Unite -start-insert buffer<cr>
+nnoremap <leader>e :<c-u>Unite file buffer<cr>
 nnoremap <leader>o :<c-u>Unite file/new<cr>
 nnoremap <leader>h :<c-u>Unite help<cr>
 nnoremap <leader>t :<c-u>Unite tag<cr>
+nnoremap <leader>l :<c-u>Unite line<cr>
 nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
 nnoremap <leader>r :<c-u>Unite file_mru<cr>
 
 "" CtrlP
 """""""""""
-nnoremap <leader>B :<c-u>CtrlPBuffer<cr>
+nnoremap <leader>b :<c-u>CtrlPBuffer<cr>
 nnoremap <leader>E :<c-u>CtrlP<cr>
 nnoremap <leader>W :<c-u>CtrlPCurWD<cr>
 nnoremap <leader>T :<c-u>CtrlPTag<cr>
@@ -106,7 +107,7 @@ nnoremap <leader>u :GundoToggle<cr>
 
 "" Ag
 """""""""""
-nnoremap <leader>/ :Ag 
+nnoremap <leader>/ :GrepperAg 
 
 
 "" vim-dispatch
