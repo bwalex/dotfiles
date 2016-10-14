@@ -158,3 +158,9 @@ vnoremap <silent> # :<C-U>call VSetSearch('?')<CR>?<C-R>/<CR>
 nmap <unique> <Leader>vl <Plug>VLToggle
 vnoremap <silent> _ :<C-U>call VSetSearchAssign('/')<CR>/<C-R>/<CR>
 nmap <leader>= /<c-r>='\s'."\\<".expand("<cword>").'\>.*\s\(<=\\|=\)\s'<cr><CR>
+
+"" color scheme switching
+"""""""""""
+nnoremap <silent> <F7> :PrevColorScheme<CR>
+nnoremap <silent> <F8> :NextColorScheme<CR>
+call togglebg#map("<F9>")
