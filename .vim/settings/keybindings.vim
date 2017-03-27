@@ -1,47 +1,45 @@
-" Keep original , as ,,
-nnoremap <leader>, ,
-
 " clear highlighting of hlsearch
-nmap \q :nohlsearch<cr>
 nmap \c :nohlsearch<cr>
+nmap <leader>c :nohlsearch<cr>
 
 " ," Surround a word with "quotes"
-map <leader>" ysiw"
-vmap <leader>" c"<C-R>""<ESC>
+map <leader>s" ysiw"
+vmap <leader>s" c"<C-R>""<ESC>
 
 " ,' Surround a word with 'single quotes'
-map <leader>' ysiw'
-vmap <leader>' c'<C-R>"'<ESC>
+map <leader>s' ysiw'
+vmap <leader>s' c'<C-R>"'<ESC>
 
 " ,) or ,( Surround a word with (parens)
 " The difference is in whether a space is put in
-map <leader>( ysiw(
-map <leader>) ysiw)
-vmap <leader>( c( <C-R>" )<ESC>
-vmap <leader>) c(<C-R>")<ESC>
+map <leader>s( ysiw(
+map <leader>s) ysiw)
+vmap <leader>s( c( <C-R>" )<ESC>
+vmap <leader>s) c(<C-R>")<ESC>
 
 " ,[ Surround a word with [brackets]
-map <leader>] ysiw]
-map <leader>[ ysiw[
-vmap <leader>[ c[ <C-R>" ]<ESC>
-vmap <leader>] c[<C-R>"]<ESC>
+map <leader>s] ysiw]
+map <leader>s[ ysiw[
+vmap <leader>s[ c[ <C-R>" ]<ESC>
+vmap <leader>s] c[<C-R>"]<ESC>
 
 " ,{ Surround a word with {braces}
-map <leader>} ysiw}
-map <leader>{ ysiw{
-vmap <leader>} c{ <C-R>" }<ESC>
-vmap <leader>{ c{<C-R>"}<ESC>
+map <leader>s} ysiw}
+map <leader>s{ ysiw{
+vmap <leader>s{ c{ <C-R>" }<ESC>
+vmap <leader>s} c{<C-R>"}<ESC>
 
 " Go to last buffer
 nmap <C-e> :b#<cr>
 nnoremap <leader>p :b#<cr>
 
-" Go to last edit location with ,.
-nnoremap <leader>. '.
+" Use Tab to switch buffer
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 
 
-" Zoom in and out of current window with ,gz
-map <silent> <leader>gz <C-w>o
+" XXX: explore vim-unimpaired (and, to some extent, vim-surround)
+" XXX: cheatsheet: Go to last edit location with '.
 
 
 " Resize windows with arrow keys
@@ -63,16 +61,13 @@ nmap <leader>it8 :set noexpandtab ts=8 sts=8 sw=8<cr>
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 
 
-nnoremap <leader>m :Man 
-
-
 "" Unite
 """""""""""
 " also supports -default-action=....
 nnoremap <leader>B :<c-u>Unite -start-insert buffer<cr>
 nnoremap <leader>e :<c-u>Unite file buffer<cr>
 nnoremap <leader>o :<c-u>Unite file/new<cr>
-nnoremap <leader>h :<c-u>Unite help<cr>
+" nnoremap <leader>h :<c-u>Unite help<cr>
 nnoremap <leader>t :<c-u>Unite tag<cr>
 nnoremap <leader>l :<c-u>Unite line<cr>
 nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
@@ -115,28 +110,6 @@ nnoremap <leader>/ :GrepperAg
 nnoremap <leader>d :Dispatch 
 
 
-"" VCSCommand
-"""""""""""
-nmap <leader>cD :VCSDiff <C-R><C-W><CR>
-nmap <leader>cr :VCSReview <C-R><C-W><CR>
-nnoremap <leader>cb :VCSBlame<CR>
-nnoremap <leader>cB :VCSBlame!<CR>
-
-
-"" Fugitive
-"""""""""""
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>ga :Gadd<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gM :Gmove
-nnoremap <leader>gD :Gremove<cr>
-nnoremap <leader>gR :Gread<cr>
-nnoremap <leader>gW :Gwrite<cr>
-
-
 "" vimux
 """""""""""
 nnoremap <leader>rc :VimuxPromptCommand<cr>
@@ -149,6 +122,11 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
+vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a: :Tabularize /:<CR>
+vmap <Leader>a:: :Tabularize /::<CR>
+vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 
 "" visual search
@@ -159,8 +137,18 @@ nmap <unique> <Leader>vl <Plug>VLToggle
 vnoremap <silent> _ :<C-U>call VSetSearchAssign('/')<CR>/<C-R>/<CR>
 nmap <leader>= /<c-r>='\s'."\\<".expand("<cword>").'\>.*\s\(<=\\|=\)\s'<cr><CR>
 
-"" color scheme switching
+"" easymotion
 """""""""""
-nnoremap <silent> <F7> :PrevColorScheme<CR>
-nnoremap <silent> <F8> :NextColorScheme<CR>
-call togglebg#map("<F9>")
+map  <Leader>j <Plug>(easymotion-j)
+map  <Leader>k <Plug>(easymotion-k)
+map  <Leader>jj <Plug>(easymotion-bd-f)
+nmap <Leader>jj <Plug>(easymotion-overwin-f)
+nmap <Leader>jJ <Plug>(easymotion-overwin-f2)
+map  <Leader>jl <Plug>(easymotion-bd-jk)
+nmap <Leader>jl <Plug>(easymotion-overwin-line)
+map  <Leader>jw <Plug>(easymotion-bd-w)
+nmap <Leader>jw <Plug>(easymotion-overwin-w)
+
+"" startify
+"""""""""""
+nnoremap <silent><Leader>h :Startify<CR>
