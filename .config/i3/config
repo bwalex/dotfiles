@@ -17,6 +17,7 @@ font pango:Source Code Pro 9
 
 # i3-gaps
 gaps inner 4
+gaps outer 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -195,7 +196,7 @@ exec_always --no-startup-id feh --bg-scale ~/Downloads/yosemite.png
 # exec --no-startup-id ~/.i3/wallpaper.sh
 # 
 # # No title bars. Doesn't play well with compton and MOAR SPACE!
-#new_window 1pixel
+new_window 1pixel
 
 # Screenshot
 bindsym Print exec spectacle
