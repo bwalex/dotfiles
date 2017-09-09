@@ -170,22 +170,23 @@ set $silver   #e4e4e4
 set $elegant  #1C2331
 
 
-bar {
-#    verbose yes
-    status_command i3blocks
-    i3bar_command i3bar -t
-    position top
-    font pango:Source Code Pro, FontAwesome 10
-    height 24
-    colors {
-                            # Border    # Background    # Text
-        focused_workspace   $silver     $silver         $elegant
-        active_workspace    $elegant    $elegant        $orange
-        inactive_workspace  $elegant    $elegant        $cyan
-        urgent_workspace    $wine       $wine           $silver
-        background          $elegant
-    }
-}
+exec_always --no-startup-id ~/scripts/polybar.sh
+# bar {
+# #    verbose yes
+#     status_command i3blocks
+#     i3bar_command i3bar -t
+#     position top
+#     font pango:Source Code Pro, FontAwesome 10
+#     height 24
+#     colors {
+#                             # Border    # Background    # Text
+#         focused_workspace   $silver     $silver         $elegant
+#         active_workspace    $elegant    $elegant        $orange
+#         inactive_workspace  $elegant    $elegant        $cyan
+#         urgent_workspace    $wine       $wine           $silver
+#         background          $elegant
+#     }
+# }
 
 #exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 exec --no-startup-id compton -b
