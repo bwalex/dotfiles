@@ -1,0 +1,57 @@
+separator=false
+separator_block_width=16
+markup=pango
+
+[temp]
+label=  
+command=echo "$(sensors coretemp-isa-0000 | awk '/Package/ {print $4}')"
+interval=10
+color=#b58900
+
+# Volume indicator
+[volume]
+label=
+instance=Master
+interval=1
+signal=10
+color=#ffb64c
+
+[disk-home]
+label=:
+command=/usr/lib/i3blocks/disk $HOME
+interval=30
+color=#859900
+
+[load]
+label= 
+command=/usr/lib/i3blocks/load_average
+interval=10
+color=#6c71c4
+
+[memory]
+label= 
+command=/usr/lib/i3blocks/memory
+interval=10
+color=#839496
+
+[volume]
+label=
+command=/usr/lib/i3blocks/volume
+interval=2
+signal=10
+color=#d70a53
+
+[time]
+label=
+command=echo "`date +'%a %d %b'` <b>`date +'%T'`</b>"; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+interval=1
+markup=pango
+#border=#928374
+color=#50C878
+
+[shutdown_menu]
+full_text= 
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+command=$HOME/scripts/shutdown_menu -p rofi -c; echo Quit
+separator_block_width=0
