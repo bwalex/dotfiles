@@ -143,3 +143,4 @@ autoload -U zmv
 alias zmv="noglob zmv -W"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/bin:$PATH"

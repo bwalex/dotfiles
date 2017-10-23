@@ -67,6 +67,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rake'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bhurlow/vim-parinfer'
 " }
 
 Plug 'editorconfig/editorconfig-vim'
