@@ -37,7 +37,6 @@ Plug 'sjl/gundo.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
 Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'JazzCore/ctrlp-cmatcher', { 'do': './install.sh' }
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-startify'
 " }
