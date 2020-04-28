@@ -69,6 +69,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-fireplace'
+Plug 'jvirtanen/vim-hcl'
 " }
 
 Plug 'editorconfig/editorconfig-vim'
