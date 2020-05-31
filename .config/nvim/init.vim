@@ -71,7 +71,7 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-fireplace'
 let g:conjure_log_direction = 'horizontal'
 let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
-Plug 'Olical/conjure', { 'tag': 'v2.1.2', 'do': 'bin/compile' }
+Plug 'Olical/conjure', { 'tag': 'v3.4.0' }
 " }
 
 Plug 'editorconfig/editorconfig-vim'
