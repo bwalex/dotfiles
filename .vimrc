@@ -68,8 +68,13 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-sexp'
-Plug 'tpope/vim-fireplace'
+" Plug 'tpope/vim-fireplace'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'liquidz/vim-iced'
 Plug 'jvirtanen/vim-hcl'
+
+Plug 'liquidz/vim-iced-asyncomplete'
+
 " }
 
 Plug 'editorconfig/editorconfig-vim'
@@ -80,7 +85,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'garbas/vim-snipmate'
+" Plug 'garbas/vim-snipmate'
 Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'terryma/vim-expand-region'

@@ -18,8 +18,7 @@ green = #aec795
 [bar/Bar]
 wm-restack = i3
 width = 100%
-height = 32
-monitor = DP-4
+height = 48
 
 enable-ipc = true
 
@@ -31,49 +30,21 @@ module-margin-left = 1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = filesystem cpu memory volume date power_menu
-
-background = #1C2331
-foreground = ${colors.white}
-
-underline-size = 2
-underline-color = ${colors.white}
-
-font-0 = Source Code Pro:size=14;0
-font-1 = FontAwesome:size=14;0
-font-2 = Source Code Pro:weight=bold:size=14;0
-
-[bar/Bar2]
-wm-restack = i3
-width = 100%
-height = 32
-monitor = DP-2
-
-enable-ipc = true
-
-padding-left = 1
-padding-right = 1
-
-module-margin-right = 1
-module-margin-left = 1
-
-modules-left = bspwm i3
-modules-center = 
-modules-right = 
-
-background = #1C2331
-foreground = ${colors.white}
-
-underline-size = 2
-underline-color = ${colors.white}
+modules-right = battery volume date power_menu
 
 tray-position = right
-tray-padding = 2
+tray-scale = 1.0
+tray-maxsize = 42
 
-font-0 = terminus:size=14;0
-font-1 = FontAwesome:size=14;0
-font-2 = TakaoGothic:weight=bold:size=14;0
+background = #1C2331
+foreground = ${colors.white}
 
+underline-size = 2
+underline-color = ${colors.white}
+
+font-0 = Source Code Pro:size=24;0
+font-1 = FontAwesome:size=24;0
+font-2 = Source Code Pro:weight=bold:size=24;0
 
 
 [module/filesystem]
@@ -215,26 +186,12 @@ label-muted =  sound muted
 label-muted-foreground = ${colors.gray}
 
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 65
+[module/battery]
+type = internal/battery
 
-format = <label>
-format-underline = ${colors.white}
-format-warn = <label-warn>
-format-warn-underline = ${colors.red}
-
-format-padding = 1
-format-warn-padidng = 1
-
-label =  %temperature%
-label-warn =  %temperature%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #55
+; This is useful in case the battery never reports 100% charge
+full-at = 94
+poll-interval = 20
 
 [module/power_menu]
 type = custom/text
