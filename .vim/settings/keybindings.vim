@@ -63,23 +63,28 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<cr>
 
 "" Unite
 """""""""""
-" also supports -default-action=....
-nnoremap <leader>B :<c-u>Unite -start-insert buffer<cr>
-nnoremap <leader>e :<c-u>Unite file buffer<cr>
-nnoremap <leader>o :<c-u>Unite file/new<cr>
-" nnoremap <leader>h :<c-u>Unite help<cr>
-nnoremap <leader>t :<c-u>Unite tag<cr>
-nnoremap <leader>l :<c-u>Unite line<cr>
-nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
-nnoremap <leader>r :<c-u>Unite file_mru<cr>
+"" also supports -default-action=....
+"nnoremap <leader>B :<c-u>Unite -start-insert buffer<cr>
+"nnoremap <leader>e :<c-u>Denite -start-filter file/rec buffer<cr>
+"nnoremap <leader>o :<c-u>Unite file/new<cr>
+"" nnoremap <leader>h :<c-u>Unite help<cr>
+"nnoremap <leader>t :<c-u>Unite tag<cr>
+"nnoremap <leader>l :<c-u>Unite line<cr>
+"nnoremap <leader>y :<c-u>Unite -quick-match history/yank<cr>
+"nnoremap <leader>r :<c-u>Unite file_mru<cr>
 
 "" CtrlP
 """""""""""
-nnoremap <leader>b :<c-u>CtrlPBuffer<cr>
-nnoremap <leader>E :<c-u>CtrlP<cr>
-nnoremap <leader>W :<c-u>CtrlPCurWD<cr>
-nnoremap <leader>T :<c-u>CtrlPTag<cr>
-nnoremap <leader>R :<c-u>CtrlPMRUFiles<cr>
+"nnoremap <leader>b :<c-u>CtrlPBuffer<cr>
+"nnoremap <leader>E :<c-u>CtrlP<cr>
+"nnoremap <leader>W :<c-u>CtrlPCurWD<cr>
+"nnoremap <leader>T :<c-u>CtrlPTag<cr>
+"nnoremap <leader>R :<c-u>CtrlPMRUFiles<cr>
+
+"" Files/buffers/etc
+nnoremap <leader>b :<c-u>Buffers<cr>
+nnoremap <leader>e :<c-u>Files<cr>
+nnoremap <leader>m :<c-u>Marks<cr>
 
 "" NERDTree
 """""""""""
@@ -95,9 +100,9 @@ nnoremap <silent> <c-right> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\>     :TmuxNavigatePrevious<cr>
 
 
-"" Gundo
+"" Undo
 """""""""""
-nnoremap <leader>u :GundoToggle<cr>
+nnoremap <leader>u :UndotreeToggle<cr>
 
 
 "" Ag

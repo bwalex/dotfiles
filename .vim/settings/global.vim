@@ -34,3 +34,5 @@ set smarttab
 if has("multi_byte")
 	set enc=utf-8
 endif
+
+set encoding=utf-8

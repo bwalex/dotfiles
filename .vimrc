@@ -22,9 +22,13 @@ Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " }
 
-" nerdtree {
-Plug 'scrooloose/nerdtree'
+" file manager {
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'tpope/vim-vinegar'
+
+Plug 'francoiscabrol/ranger.vim'
 " }
 
 " eye-candy {
@@ -33,11 +37,14 @@ Plug 'vim-airline/vim-airline-themes'
 " }
 
 " menus, etc {
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
+
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'Shougo/unite.vim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'mhinz/vim-startify'
 " }
 
@@ -49,19 +56,6 @@ Plug 'mhinz/vim-signify'
 " }
 
 " syntax {
-" Plug 'elubow/cql-vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-" Plug 'othree/html5.vim'
-" Plug 'elzr/vim-json'
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'mustache/vim-mustache-handlebars'
-" Plug 'thoughtbot/vim-rspec'
-" Plug 'vim-ruby/vim-ruby'
-" Plug 'derekwyatt/vim-scala'
-" Plug 'tpope/vim-cucumber'
-" Plug 'tpope/vim-haml'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rake'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -69,12 +63,21 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-fireplace'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'liquidz/vim-iced'
 Plug 'jvirtanen/vim-hcl'
 
+Plug 'liquidz/vim-iced'
+" }
+
+" autocomplete, lint, etc {
+Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'liquidz/vim-iced-asyncomplete'
 
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --gocode-completer && cd third_party/ycmd/third_party/tern_runtime && npm install tern-jspm' }
+if v:version < 800
+Plug 'scrooloose/syntastic'
+else
+Plug 'w0rp/ale'
+end
 " }
 
 Plug 'editorconfig/editorconfig-vim'
@@ -100,12 +103,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'matze/vim-move'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --gocode-completer && cd third_party/ycmd/third_party/tern_runtime && npm install tern-jspm' }
-if v:version < 800
-Plug 'scrooloose/syntastic'
-else
-Plug 'w0rp/ale'
-end
 
 " colorschemes {
 " Plug 'xolox/vim-colorscheme-switcher'
