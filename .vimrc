@@ -70,13 +70,16 @@ Plug 'liquidz/vim-iced'
 
 " autocomplete, lint, etc {
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'liquidz/vim-iced-asyncomplete'
 
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --gocode-completer && cd third_party/ycmd/third_party/tern_runtime && npm install tern-jspm' }
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
 if v:version < 800
 Plug 'scrooloose/syntastic'
 else
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 end
 " }
 
