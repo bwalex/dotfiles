@@ -200,10 +200,9 @@ exec --no-startup-id xfce4-notes
 
 #exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 #exec --no-startup-id compton -b
-exec_always --no-startup-id feh --bg-scale ~/Downloads/yosemite.png
 # # Background image
-# exec --no-startup-id ~/.i3/wallpaper.sh
-# 
+exec_always --no-startup-id ~/scripts/wallpaper.sh
+
 # # No title bars. Doesn't play well with compton and MOAR SPACE!
 new_window 1pixel
 
