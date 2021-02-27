@@ -1,10 +1,15 @@
 #!/bin/sh
 
+HOSTNAME=`hostname -s`
+
 # Terminate already running bar instances
 killall -q polybar
 
 # Wait until the processes have been shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
-# Launch bar1 and bar2
-polybar Bar &
+if [ -x "~/scripts/polybar.${HOSTNAME}.sh" ]; then
+    exec ~/scripts/polybar.${HOSTNAME}.sh
+else
+    polybar Bar &
+fi
