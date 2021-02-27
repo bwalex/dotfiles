@@ -44,3 +44,5 @@
 	conflictstyle = diff3
 	# consider changing to fugitive
 	tool = vimdiff
+[pull]
+	rebase = false
