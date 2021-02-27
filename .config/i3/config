@@ -155,7 +155,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Shift+l exec i3lock
+bindsym $mod+Shift+l exec i3lock --color=#111111
 
 set $white       #ffffff
 set $black       #282828

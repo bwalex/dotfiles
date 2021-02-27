@@ -167,8 +167,8 @@ label-disconnected-foreground = ${colors.gray}
 
 [module/date]
 type = internal/date
+interval = 5
 date = %{A1:gsimplecal:} %a %d %b %{T3}%T%{T-}%{A}
-interval = 1
 # format-underline = ${colors.white}
 ;format-background = ${colors.black}
 format-foreground = #50C878
