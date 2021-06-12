@@ -22,9 +22,13 @@ Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " }
 
-" nerdtree {
-Plug 'scrooloose/nerdtree'
+" file manager {
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'tpope/vim-vinegar'
+
+Plug 'francoiscabrol/ranger.vim'
 " }
 
 " eye-candy {
@@ -33,11 +37,13 @@ Plug 'vim-airline/vim-airline-themes'
 " }
 
 " menus, etc {
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
+
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nixprime/cpsm', { 'do': './install.sh' }
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'Shougo/unite.vim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'mhinz/vim-startify'
 " }
 
@@ -49,29 +55,36 @@ Plug 'mhinz/vim-signify'
 " }
 
 " syntax {
-" Plug 'elubow/cql-vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-" Plug 'othree/html5.vim'
-" Plug 'elzr/vim-json'
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'mustache/vim-mustache-handlebars'
-" Plug 'thoughtbot/vim-rspec'
-" Plug 'vim-ruby/vim-ruby'
-" Plug 'derekwyatt/vim-scala'
-" Plug 'tpope/vim-cucumber'
-" Plug 'tpope/vim-haml'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rake'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'bhurlow/vim-parinfer'
 Plug 'guns/vim-sexp'
-Plug 'tpope/vim-fireplace'
-let g:conjure_log_direction = 'horizontal'
-let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
-Plug 'Olical/conjure', { 'tag': 'v4.14.1' }
+" Plug 'tpope/vim-fireplace'
+Plug 'jvirtanen/vim-hcl'
+
+"let g:conjure_log_direction = 'horizontal'
+"let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
+"Plug 'Olical/conjure', { 'tag': 'v4.20.1' }
+
+let g:iced_default_key_mapping_leader = '<LocalLeader>'
+Plug 'liquidz/vim-iced'
+" }
+
+" autocomplete, lint, etc {
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'liquidz/vim-iced-asyncomplete'
+
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+if v:version < 800
+Plug 'scrooloose/syntastic'
+else
+Plug 'dense-analysis/ale'
+end
 " }
 
 Plug 'editorconfig/editorconfig-vim'
@@ -82,7 +95,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'garbas/vim-snipmate'
+" Plug 'garbas/vim-snipmate'
 Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'terryma/vim-expand-region'
@@ -97,22 +110,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'matze/vim-move'
 
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --gocode-completer && cd third_party/ycmd/third_party/tern_runtime && npm install tern-jspm' }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-let g:deoplete#enable_at_startup = 1
-
-if v:version < 800
-Plug 'scrooloose/syntastic'
-else
-Plug 'w0rp/ale'
-end
 
 " colorschemes {
 " Plug 'xolox/vim-colorscheme-switcher'
@@ -142,8 +139,6 @@ Plug '~/.vim/bundle/scratch.vim'
 Plug '~/.vim/bundle/sv'
 call plug#end()
 
-
-call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
 
 syntax on
 filetype plugin indent on

@@ -40,7 +40,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nixprime/cpsm', { 'do': './install.sh' }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -65,6 +64,7 @@ Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-fireplace'
 Plug 'jvirtanen/vim-hcl'
 
+let g:iced_default_key_mapping_leader = '<LocalLeader>'
 Plug 'liquidz/vim-iced'
 " }
 
