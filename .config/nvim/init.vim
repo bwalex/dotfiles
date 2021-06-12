@@ -64,19 +64,19 @@ Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-fireplace'
 Plug 'jvirtanen/vim-hcl'
 
-"let g:conjure_log_direction = 'horizontal'
-"let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
-"Plug 'Olical/conjure', { 'tag': 'v4.20.1' }
+let g:conjure_log_direction = 'horizontal'
+let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
+Plug 'Olical/conjure', { 'tag': 'v4.20.1' }
 
-let g:iced_default_key_mapping_leader = '<LocalLeader>'
-Plug 'liquidz/vim-iced'
+"let g:iced_default_key_mapping_leader = '<LocalLeader>'
+"Plug 'liquidz/vim-iced'
 " }
 
 " autocomplete, lint, etc {
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'liquidz/vim-iced-asyncomplete'
+"Plug 'liquidz/vim-iced-asyncomplete'
 
 " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
