@@ -66,7 +66,7 @@ Plug 'jvirtanen/vim-hcl'
 
 let g:conjure_log_direction = 'horizontal'
 let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
-Plug 'Olical/conjure', { 'tag': 'v4.20.1' }
+Plug 'Olical/conjure', { 'tag': 'v4.27.0' }
 
 "let g:iced_default_key_mapping_leader = '<LocalLeader>'
 "Plug 'liquidz/vim-iced'
