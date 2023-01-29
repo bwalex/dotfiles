@@ -180,6 +180,7 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id xfsettingsd --sm-client-disable
 exec --no-startup-id xfce4-power-manager --sm-client-disable
 exec --no-startup-id xfce4-notes
+exec --no-startup-id /sbin/insync
 #exec --no-startup-id xfce4-panel --disable-wm-check
 #bar {
 ##    verbose yes
@@ -224,14 +225,14 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-workspace 1 output DP-4
-workspace 2 output DP-4
-workspace 3 output DP-4
-workspace 4 output DP-4
-workspace 5 output DP-4
+workspace 1 output DisplayPort-0
+workspace 2 output DisplayPort-0
+workspace 3 output DisplayPort-0
+workspace 4 output DisplayPort-0
+workspace 5 output DisplayPort-0
 
-workspace 6 output DP-2
-workspace 7 output DP-2
-workspace 8 output DP-2
-workspace 9 output DP-2
-workspace 10 output DP-2
+workspace 6 output  DisplayPort-2
+workspace 7 output  DisplayPort-2
+workspace 8 output  DisplayPort-2
+workspace 9 output  DisplayPort-2
+workspace 10 output DisplayPort-2
