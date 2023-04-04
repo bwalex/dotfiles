@@ -45,8 +45,8 @@ for_window [class="(?i)pinentry"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
 # start a terminal
-bindsym $mod+Return exec konsole
-bindsym $mod+Shift+Return exec konsole
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -180,7 +180,8 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id xfsettingsd --sm-client-disable
 exec --no-startup-id xfce4-power-manager --sm-client-disable
 exec --no-startup-id xfce4-notes
-exec --no-startup-id /sbin/insync
+exec --no-startup-id insync
+exec --no-startup-id /usr/lib/lxpolkit/lxpolkit
 #exec --no-startup-id xfce4-panel --disable-wm-check
 #bar {
 ##    verbose yes

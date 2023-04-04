@@ -35,8 +35,8 @@
   ;; }
  :aliases
  {:nrepl {:extra-deps  {nrepl             {:mvn/version "0.8.3"}
-                        cider/cider-nrepl {:mvn/version "0.25.6"}
-                        iced-nrepl        {:mvn/version "1.1.2"}}
+                        cider/cider-nrepl {:mvn/version "0.26.0"}
+                        iced-nrepl        {:mvn/version "1.2.1"}}
           :main-opts   ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware,iced.nrepl/wrap-iced]"]
           :jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]}
 
