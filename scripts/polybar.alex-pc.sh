@@ -1,4 +1,4 @@
-POLYBAR_CONFIG="${HOME}/.config/polybar/alex-pc.config"
+POLYBAR_CONFIG="${HOME}/.config/polybar/bars/alex-pc"
 
-polybar -c ${POLYBAR_CONFIG} Bar &
-polybar -c ${POLYBAR_CONFIG} Bar2 &
+polybar -c ${POLYBAR_CONFIG} top-left &
+polybar -c ${POLYBAR_CONFIG} top-right &
