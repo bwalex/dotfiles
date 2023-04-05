@@ -45,8 +45,8 @@ for_window [class="(?i)pinentry"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 
 # start a terminal
-bindsym $mod+Return exec kitty
-bindsym $mod+Shift+Return exec kitty
+bindsym $mod+Return exec konsole
+bindsym $mod+Shift+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,7 +172,7 @@ set $elegant  #1C2331
 
 
 exec_always --no-startup-id ~/scripts/polybar.sh
-exec --no-startup-id dunst
+exec --no-startup-id dunst -config $HOME/.config/dunst/nord2.dunstrc
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet
