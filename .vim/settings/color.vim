@@ -11,5 +11,6 @@ let g:gruvbox_contrast_light = "hard"
 let g:solarized_termcolors=256
 
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme nord
 "colorscheme space-vim-dark

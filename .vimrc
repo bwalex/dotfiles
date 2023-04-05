@@ -110,6 +110,7 @@ Plug 'matze/vim-move'
 " colorschemes {
 " Plug 'xolox/vim-colorscheme-switcher'
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'tomasr/molokai'
 " Plug 'jnurmine/Zenburn'
