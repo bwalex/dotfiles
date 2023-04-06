@@ -190,7 +190,7 @@ exec_always --no-startup-id ~/scripts/polybar.sh
 exec --no-startup-id dbus-update-activation-environment --all
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets,pkcs11
 exec --no-startup-id picom -b
-exec --no-startup-id dunst -config $HOME/.config/dunst/nord2.dunstrc
+exec --no-startup-id ~/scripts/notifications-daemon.sh
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet
