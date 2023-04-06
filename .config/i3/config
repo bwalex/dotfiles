@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:Hack 11
 
 # i3-gaps
-gaps inner 7
+gaps inner 6
 gaps outer 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
