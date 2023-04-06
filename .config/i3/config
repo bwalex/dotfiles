@@ -181,9 +181,8 @@ set $elegant  #1C2331
     client.background       #242424
 
 # N O R D  Borders
-for_window [class="^.*"] border pixel 0
-for_window [title="^.*"] border pixel 0
 
+for_window [class="^.*"] border pixel 1
 
 
 exec_always --no-startup-id ~/scripts/polybar.sh
