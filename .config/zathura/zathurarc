@@ -46,3 +46,6 @@ set render-loading-fg       "#d8dee9" # nord4
 set recolor "false"
 set recolor-reverse-video "true"
 set recolor-keephue "true"
+
+
+set font "Hack 12"
