@@ -14,8 +14,12 @@ $jobs\
 $shell
 $status$character"""
 
+[username]
+format = '[$user]($style) @ '
+
 [hostname]
 ssh_only = true
+ssh_symbol = ''
 
 [git_status]
 untracked = ''
