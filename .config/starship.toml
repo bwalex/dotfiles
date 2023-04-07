@@ -1,0 +1,33 @@
+add_newline = true
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$jobs\
+$shell
+$status$character"""
+
+[hostname]
+ssh_only = true
+
+[git_status]
+untracked = ''
+
+[directory]
+truncation_length = 4
+truncation_symbol = '…/'
+
+[status]
+disabled = false
+symbol = ''
+
+[jobs]
+format = '[\[$symbol$number\]]($style) '
+symbol = '&'
+style = 'yellow'
