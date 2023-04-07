@@ -17,6 +17,7 @@ fi
 [ -f "${ZSH_HOME}/keybindings.zsh" ] && . "${ZSH_HOME}/keybindings.zsh"
 [ -f "${ZSH_HOME}/aliases.zsh" ] && . "${ZSH_HOME}/aliases.zsh"
 [ -f "${ZSH_HOME}/fzf.zsh" ] && . "${ZSH_HOME}/fzf.zsh"
+[ -f "${ZSH_HOME}/fancy-ctrl-z.zsh" ] && . "${ZSH_HOME}/fancy-ctrl-z.zsh"
 
 # Customize to your needs...
 REPORTTIME=1
