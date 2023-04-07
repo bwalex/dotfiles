@@ -1,6 +1,3 @@
 [submodule ".oh-my-zsh"]
 	path = .config/zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".vim/bundle/cql-vim"]
-	path = .vim/bundle/cql-vim
-	url = https://github.com/elubow/cql-vim.git
