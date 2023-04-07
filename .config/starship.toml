@@ -9,6 +9,7 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
+$python\
 $jobs\
 $shell
 $status$character"""
@@ -31,3 +32,7 @@ symbol = ''
 format = '[\[$symbol$number\]]($style) '
 symbol = '&'
 style = 'yellow'
+
+[python]
+format = '[${symbol}(\($virtualenv\) )]($style)'
+symbol = ''
