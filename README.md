@@ -16,6 +16,7 @@ git --git-dir=$HOME/dotfiles.git --work-tree=$HOME status
 ```
 dotfiles config --local status.showUntrackedFiles no
 dotfiles submodule update --init --recursive
+rm -rf $HOME/dotfiles-tmp
 ```
 
 Generally, use `dotfiles` as if it was `git`.
