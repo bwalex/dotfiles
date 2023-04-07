@@ -1,5 +1,6 @@
 # User configuration
 ZSH_HOME="$HOME/.config/zsh"
+OH_MY_ZSH="$ZSH_HOME/oh-my-zsh"
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -9,6 +10,11 @@ if command -v rbenv rbenv >/dev/null 2>&1 ; then
 fi
 
 if command -v starship >/dev/null 2>&1 ; then
+  . "${OH_MY_ZSH}/lib/functions.zsh"
+  . "${OH_MY_ZSH}/lib/completion.zsh"
+  . "${OH_MY_ZSH}/lib/history.zsh"
+  . "${OH_MY_ZSH}/lib/key-bindings.zsh"
+  . "${OH_MY_ZSH}/lib/termsupport.zsh"
   eval "$(starship init zsh)"
 elif [[ -f "${ZSH_HOME}/oh-my-zsh.zsh" ]] && [[ -d "${HOME}/.oh-my-zsh" ]]; then
   . "${ZSH_HOME}/oh-my-zsh.zsh"
