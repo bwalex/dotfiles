@@ -66,17 +66,17 @@ ws-icon-8 = ${config.ws-icon-8}
 ws-icon-9 = ${config.ws-icon-9}
 ws-icon-default = ${config.ws-icon-default}
 
-label-focused = %icon%
+label-focused = %index%
 label-focused-underline = ${colors.nord7}
 label-focused-foreground = ${colors.nord7}
 label-focused-padding = 2
 
-label-occupied = %icon%
+label-occupied = %index%
 label-occupied-underline = ${colors.nord9}
 label-occupied-foreground = ${colors.nord9}
 label-occupied-padding = 2
 
-label-empty = %icon%
+label-empty = %index%
 label-empty-foreground = ${colors.buffer}
 label-empty-padding = 2
 

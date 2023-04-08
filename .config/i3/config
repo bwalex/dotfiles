@@ -54,7 +54,7 @@ bindsym $mod+Shift+x kill
 
 # start dmenu (a program launcher)
 # XXX: rofi, albert?
-bindsym $mod+p exec "rofi -combi-modi drun,run -show combi -modi combi"
+bindsym $mod+r exec "rofi -combi-modi drun,run -show combi -modi combi"
 
 
 # alternatively, you can use the cursor keys:
@@ -153,8 +153,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 bindsym $mod+Shift+l exec i3lock --color=#111111
 
 set $white       #ffffff
@@ -187,41 +185,7 @@ for_window [title="^.*"] border pixel 1
 
 
 exec_always --no-startup-id ~/scripts/polybar.sh
-exec --no-startup-id dbus-update-activation-environment --all
-# XXX: Use KeePassXC's secret service integration instead
-#exec --no-startup-id gnome-keyring-daemon --start --components=secrets,pkcs11
-exec --no-startup-id picom -b
-exec --no-startup-id ~/scripts/notifications-daemon.sh
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-tray
-exec --no-startup-id xfsettingsd --sm-client-disable
-exec --no-startup-id xfce4-power-manager --sm-client-disable
-exec --no-startup-id xfce4-notes
-exec --no-startup-id insync
-exec --no-startup-id /usr/lib/lxpolkit/lxpolkit
-#exec --no-startup-id xfce4-panel --disable-wm-check
-#bar {
-##    verbose yes
-#    status_command i3status
-#    i3bar_command i3bar -t
-#    position top
-#    font pango:Source Code Pro, FontAwesome 24
-#    height  48
-#    colors {
-#                            # Border    # Background    # Text
-#        focused_workspace   $silver     $silver         $elegant
-#        active_workspace    $elegant    $elegant        $orange
-#        inactive_workspace  $elegant    $elegant        $cyan
-#        urgent_workspace    $wine       $wine           $silver
-#        background          $elegant
-#    }
-#}
-
-#exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
-#exec --no-startup-id compton -b
-# # Background image
+exec --no-startup-id ~/scripts/autostart.sh i3
 exec_always --no-startup-id ~/scripts/wallpaper.sh
 
 # # No title bars. Doesn't play well with compton and MOAR SPACE!
