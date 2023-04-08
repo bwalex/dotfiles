@@ -1,21 +1,23 @@
+# --------- SXHKD (SHORTCUTS MANAGER) ---------
+
+# sxhkd reload keybindings:
+super + Escape
+	pkill -USR1 -x sxhkd
+
 #
 # wm independent hotkeys
 #
 
 # terminal emulator
 super + {_,shift} + Return
-  {_,bspc rule -a \* -o state=floating &&} konsole
+  {_,bspc rule -a \* -o state=floating &&} wezterm -e zsh -c "neofetch --iterm2; echo; zsh"
 
 # filemanager
 super + e
-  konsole -e ranger
+  wezterm -e ranger
 
 super + shift + e
   thunar
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
 
 super + r
   rofi -combi-modi drun,run -show combi -modi combi
@@ -27,15 +29,24 @@ XF86AudioMute
   pamixer -t
 
 super + c
-  bspc rule -a \* -o state=floating && konsole -e asccalc
+  bspc rule -a \* -o state=floating && wezterm -e asccalc
+
+# get window's class name
+super + alt + c
+    notify-send "$(xprop | grep 'CLASS')"
+
+
 
 #
 # bspwm hotkeys
 #
 
 # quit/restart bspwm
-super + shift + {q,r}
-	bspc {quit,wm -r}
+super + shift + r
+	bspc wm -r
+
+super + shift + q
+  $HOME/scripts/shutdown_menu
 
 # close and kill
 super + {_,shift + }x
@@ -86,7 +97,7 @@ super + space; shift + d
 super + space; e
     $HOME/bin/bsptab-rs embed focused
 super + space; Return
-    $HOME/bin/bsptab-rs embed focused & konsole
+    $HOME/bin/bsptab-rs embed focused & wezterm
 super + space; {h,j,k,l}
     $HOME/bin/bsptab-rs create focused {west,south,north,east}
 super + space; {Left,Down,Up,Right}

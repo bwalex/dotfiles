@@ -1,9 +1,12 @@
 configuration {
 	modi: "run,drun";
-	font: "Hack 12";
+	font: "Hack Nerd Font 12";
 	show-icons: true;
 	drun-display-format: "{icon} {name}";
 	display-run: " ";
-	display-drun: "  ";
+	display-drun: "  ";
 }
+
 @theme "~/.config/rofi/Nord.rasi"
+
+element-icon { size: 2ch; }
