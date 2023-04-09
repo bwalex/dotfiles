@@ -1,0 +1,15 @@
+[Unit]
+Description=Mopidy music server
+After=dbus.service
+After=nss-lookup.target
+After=pulseaudio.service
+After=pipewire.service
+After=pipewire-pulse.service
+After=remote-fs.target
+After=sound.target
+
+[Service]
+ExecStart=/usr/bin/mopidy --config %h/.config/mopidy/mopidy.conf
+
+[Install]
+WantedBy=default.target
