@@ -35,10 +35,12 @@ bspc config single_monocle       false
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
 bspc rule -a Pavucontrol state=floating focus=on
+bspc rule -a KeePassXC state=floating focus=on
+bspc rule -a Emacs state=tiled
 
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep bspswallow || nohup ~/scripts/bspswallow &
+# pgrep bspswallow || nohup ~/scripts/bspswallow &
 
 ~/scripts/polybar.sh &
 ~/scripts/autostart.sh bspwm &
