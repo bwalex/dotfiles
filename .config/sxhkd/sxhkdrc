@@ -49,8 +49,9 @@ super + shift + q
   $HOME/scripts/shutdown_menu
 
 # close and kill
+# XXX: actually, kill is also mapped as close instead, too dangerous... (-k)
 super + {_,shift + }x
-	bspc node -{c,k}
+	bspc node -{c,c}
 
 # alternate between the tiled and monocle layout
 super + m
