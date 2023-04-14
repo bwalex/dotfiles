@@ -1,6 +1,8 @@
-#! /bin/sh
+#!/bin/sh
 
 trap 'jobs -p | xargs kill' EXIT
+
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 HOSTNAME=`hostname -s`
 
