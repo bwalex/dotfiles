@@ -27,7 +27,7 @@ config.color_scheme = 'nord'
 
 config.hide_tab_bar_if_only_one_tab = true
 
-config.font = wezterm.font 'Hack Nerd Font'
+config.font = wezterm.font_with_fallback { 'Hack Nerd Font', 'Droid Sans Fallback', 'Noto Sans Symbols 2' }
 
 if hostname == "alex-pc" then
 	config.font_size = 12
