@@ -10,7 +10,10 @@ let g:gruvbox_contrast_light = "hard"
 
 let g:solarized_termcolors=256
 
+set termguicolors
 
+let g:doom_one_terminal_colors = v:true
 "colorscheme gruvbox
-colorscheme nord
+colorscheme doom-one
+"colorscheme nord
 "colorscheme space-vim-dark

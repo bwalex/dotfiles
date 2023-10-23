@@ -32,8 +32,9 @@ Plug 'francoiscabrol/ranger.vim'
 " }
 
 " eye-candy {
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 " }
 
 " menus, etc {
@@ -66,7 +67,7 @@ Plug 'jvirtanen/vim-hcl'
 
 let g:conjure_log_direction = 'horizontal'
 let g:conjure_log_blacklist = ["up", "ret", "ret-multiline", "load-file", "eval"]
-Plug 'Olical/conjure', { 'tag': 'v4.42.0' }
+Plug 'Olical/conjure', { 'tag': 'v4.48.0' }
 
 "let g:iced_default_key_mapping_leader = '<LocalLeader>'
 "Plug 'liquidz/vim-iced'
@@ -114,7 +115,7 @@ Plug 'matze/vim-move'
 " colorschemes {
 " Plug 'xolox/vim-colorscheme-switcher'
 Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'main' }
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'tomasr/molokai'
 " Plug 'jnurmine/Zenburn'
@@ -122,6 +123,11 @@ Plug 'arcticicestudio/nord-vim'
 " Plug 'romainl/Apprentice'
 " Plug 'junegunn/seoul256.vim'
 Plug 'liuchengxu/space-vim-dark'
+
+let g:doom_one_terminal_colors = v:true
+Plug 'romgrk/doom-one.vim'
+
+"Plug 'NTBBloodbath/doom-one.nvim', { 'branch': 'main' }
 " }
 
 " tmux {
